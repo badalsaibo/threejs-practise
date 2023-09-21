@@ -1,0 +1,16 @@
+{
+  "name": "threejs-practise",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "scripts": {
+    "build": "bun scripts/bundle.ts",
+    "start": "bun scripts/server.ts",
+    "dev": "bun scripts/bundle.ts && bun scripts/server.ts"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
