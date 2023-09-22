@@ -2,16 +2,11 @@ const BASE_PATH = "./public";
 
 const server = Bun.serve({
   fetch(req: Request): Response | Promise<Response> {
-    console.log(req);
     const url = new URL(req.url).pathname;
     if (url === "/") {
-      console.log(url);
-
       return new Response(Bun.file("./public/index.html"));
     } else {
-      console.log({ url });
       const filePath = BASE_PATH + url;
-      console.log("fp", filePath);
       const file = Bun.file(filePath);
       return new Response(file);
     }

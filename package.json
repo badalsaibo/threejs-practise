@@ -6,9 +6,9 @@
     "bun-types": "latest"
   },
   "scripts": {
-    "build": "bun scripts/bundle.ts",
-    "start": "bun scripts/server.ts",
-    "dev": "bun scripts/bundle.ts && bun scripts/server.ts"
+    "build": "bun build index.ts --outdir ./public --target browser",
+    "start": "bun --hot scripts/server.ts",
+    "build:watch": "bun build --watch index.ts --outdir ./public --target browser"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
